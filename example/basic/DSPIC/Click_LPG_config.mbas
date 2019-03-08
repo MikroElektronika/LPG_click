@@ -1,0 +1,5 @@
+module Click_LPG_config
+
+include Click_LPG_types
+
+end.

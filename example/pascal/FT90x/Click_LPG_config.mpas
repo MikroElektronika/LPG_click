@@ -1,0 +1,5 @@
+unit Click_LPG_config;
+
+uses Click_LPG_types;
+
+end.

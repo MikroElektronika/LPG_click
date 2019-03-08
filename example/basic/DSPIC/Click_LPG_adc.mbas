@@ -1,0 +1,25 @@
+module Click_LPG_adc
+
+include Click_LPG_types
+
+sub procedure lpg_adcInit() 
+sub function  lpg_readADC() as uint32_t 
+
+implements
+
+sub procedure lpg_adcInit() 
+
+    ADC1_Init_Advanced(_ADC_12bit, (_ADC_INTERNAL_VREFL or _ADC_INTERNAL_VREFH)) 
+
+end sub
+
+sub function  lpg_readADC() as uint32_t 
+dim
+    readADC as uint32_t
+
+    readADC = ADC1_Read(8) 
+    result = readADC 
+
+end sub
+
+end.

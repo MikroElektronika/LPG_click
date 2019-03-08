@@ -1,0 +1,28 @@
+unit Click_LPG_adc;
+
+uses Click_LPG_types;
+
+procedure lpg_adcInit(); 
+function  lpg_readADC() :  uint32_t; 
+
+implementation
+
+procedure lpg_adcInit(); 
+begin
+
+    ADC_Init(); 
+    ADC_Set_Input_Channel(_ADC_CHANNEL_4); 
+
+end;
+
+function  lpg_readADC() :  uint32_t; 
+var
+    readADC : uint32_t;
+begin
+
+    readADC := ADC_Read(4); 
+    result := readADC; 
+
+end;
+
+end.
